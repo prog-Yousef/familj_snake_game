@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  height: 100%; /* Ensure body can take full height for min-h-screen */
+  margin: 0;   /* Remove default browser margin */
+  padding: 0;  /* Remove default browser padding */
+  overflow-x: hidden; /* Prevent horizontal scrollbars if something is too wide */
+}
+
+body {
+  /* Try to use a generic rounded sans-serif font if Inter isn't explicitly for kids */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box; /* Universal box-sizing */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Ensure dynamic grid classes are generated */
+.grid-cols-15 {
+  grid-template-columns: repeat(15, minmax(0, 1fr));
+}
+
+/* Forcing Tailwind to generate grid-cols-15, etc. if not picked up by JIT */
+.grid-cols-10 {}
+.grid-cols-11 {}
+.grid-cols-12 {}
+.grid-cols-13 {}
+.grid-cols-14 {}
+.grid-cols-16 {}
+.grid-cols-17 {}
+.grid-cols-18 {}
+.grid-cols-19 {}
+.grid-cols-20 {}
+
+@layer utilities {
+  @keyframes pulse-shadow-happy {
+    0%, 100% {
+      box-shadow: 0 0 25px 10px rgba(125, 211, 252, 0.4), /* sky-300 */
+                  0 0 40px 15px rgba(251, 176, 176, 0.3); /* rose-300 */
+    }
+    50% {
+      box-shadow: 0 0 35px 15px rgba(125, 211, 252, 0.5),
+                  0 0 55px 20px rgba(251, 176, 176, 0.4);
+    }
+  }
+  .animate-pulse-shadow-happy {
+    animation: pulse-shadow-happy 3s infinite ease-in-out;
+  }
+
+  @keyframes ping-once {
+    0% { transform: scale(1.25); opacity: 0.75; }
+    75%, 100% { transform: scale(1); opacity: 1; }
+  }
+  .animate-ping-once {
+    animation: ping-once 0.5s cubic-bezier(0.8, 0, 0.2, 1);
+  }
+
+  /* For custom rounded font if you add one to tailwind.config.js */
+  .font-rounded-md {
+    /* Your custom font-family definition here if not using a default */
+  }
+
+   /* Custom utility for landscape on small devices */
+  .mobile-landscape\:max-w-\[calc\(100vh-180px\)\] {
+    @media (max-height: 500px) and (orientation: landscape) {
+      max-width: calc(100vh - 180px);
+    }
+  }
+} 
