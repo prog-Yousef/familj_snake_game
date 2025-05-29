@@ -20,6 +20,8 @@ A simple Snake game built with React and Tailwind CSS.
 
 ### Prerequisites
 
+
+
 - Node.js and npm (or yarn) installed on your system.
 
 ### Installation and Running
