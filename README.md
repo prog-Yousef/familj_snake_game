@@ -16,6 +16,7 @@ A simple Snake game built with React and Tailwind CSS.
 - Responsive design with on-screen D-pad for mobile
 - Pause and Reset functionality
 
+
 ## Getting Started
 
 ### Prerequisites
