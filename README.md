@@ -20,6 +20,7 @@ A simple Snake game built with React and Tailwind CSS.
 
 
 
+
 ## Getting Started
 
 ### Prerequisites
