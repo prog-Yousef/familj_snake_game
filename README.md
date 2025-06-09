@@ -18,8 +18,6 @@ A simple Snake game built with React and Tailwind CSS.
 - Pause and Reset functionality
 
 
-
-
 ## Getting Started
 
 ### Prerequisites
