@@ -7,7 +7,6 @@ A simple Snake game built with React and Tailwind CSS.
 
 
 
-
 - Classic Snake gameplay
 - Score and High Score tracking (persisted in local storage)
 - Power-ups:
